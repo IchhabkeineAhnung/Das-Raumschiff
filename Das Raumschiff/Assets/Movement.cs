@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float a=1000;
+    public int a=100;
     public Rigidbody2D b;
-    public Vector2 c;
+    public UnityEngine.Vector2 c;
 
     void Awake(){
         
@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        c = new UnityEngine.Vector2(0,a);
     }
 
     // Update is called once per frame
@@ -26,8 +26,7 @@ public class Movement : MonoBehaviour
     public void Eingabe(){
         if (Input.GetKey("up"))
         {
-            c=(0,a);
-            b.velocity=)c;
+            b.AddForce(c);
             Debug.Log("up");            
         }
     }
