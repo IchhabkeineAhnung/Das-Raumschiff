@@ -362,8 +362,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2053608508}
   - component: {fileID: 2053608507}
-  - component: {fileID: 2053608506}
   - component: {fileID: 2053608509}
+  - component: {fileID: 2053608510}
   m_Layer: 0
   m_Name: Raumschiff
   m_TagString: Raumschiff
@@ -371,18 +371,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2053608506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053608505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 216b8279df109bb4388ec68bdad9dd75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2053608507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -425,7 +413,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 071ba415f534f044e992ec4110cb0de5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94117653, g: 0.94117653, b: 0.94117653, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -471,3 +459,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2053608510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053608505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2463b02955d8dba4d9d6085c9b4c8e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  b: {fileID: 2053608509}
