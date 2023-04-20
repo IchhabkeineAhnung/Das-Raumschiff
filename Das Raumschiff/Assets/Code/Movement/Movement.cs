@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 5.0f; // The speed of the movement
+    public float speed; // The speed of the movement
     private float verticalInput; // Input for vertical movemen
+    public Stats stats;
 
-    void Awake(){
-        
-    }
     // Start is called before the first frame update
     void Start()
     {
-
+        stats = GetComponent<Stats>();
+        speed = stats.speed;
     }
 
     // Update is called once per frame
@@ -27,7 +26,6 @@ void Update()
         verticalInput = Input.GetAxis("Vertical");
 
         // Move the GameObject up or down based on the input
-        transform.Translate(Vector3.up * speed * Time.deltaTime * verticalInput);
+        transform.Translate(Vector3.right* speed * Time.deltaTime * verticalInput);
     }
-
 }
