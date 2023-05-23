@@ -6,9 +6,6 @@ using UnityEngine;
 public class Raumschiff : MonoBehaviour
 {
     public GameObject Bullet;
-    public float x;
-    public float y;
-    public float z;
     // Start is called before the first frame update
     void Start()
     {

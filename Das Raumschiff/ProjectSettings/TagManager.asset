@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Raumschiff
   - Stats
+  - Enemy
   layers:
   - Default
   - TransparentFX
