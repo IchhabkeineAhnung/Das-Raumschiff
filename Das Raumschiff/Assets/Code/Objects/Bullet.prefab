@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8759992494187170105}
   - component: {fileID: 8759992494187170106}
   - component: {fileID: 6152724284191674134}
+  - component: {fileID: -5657304230614587855}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -98,11 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be104483a4611474aa4421babcd3db35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspeed: 0.1
-  bulletpen: 0
-  dmg: 1
-  coll: {fileID: 6152724284191674134}
-  damage: 10
+  bulletspeed: 0.2
+  bulletpen: 1
+  dmg: 5
 --- !u!68 &6152724284191674134
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +127,24 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &-5657304230614587855
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759992494187170107}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

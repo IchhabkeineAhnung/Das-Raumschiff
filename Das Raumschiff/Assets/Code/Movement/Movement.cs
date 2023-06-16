@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     public GameObject Bullet;
-    public float speed; // The speed of the movement
-    private float verticalInput; // Input for vertical movemen
-    public Stats stats;
+    public float speed;
+    private float verticalInput;
     public float ti;
     public float atkcooldwn = 10;
 
@@ -27,22 +26,19 @@ void Update()
     }
     
     public void movement(){
-         // Get input for vertical movement
         verticalInput = Input.GetAxis("Vertical");
-
-        // Move the GameObject up or down based on the input
-        transform.Translate(Vector3.left* speed * Time.deltaTime * verticalInput);
-        if(transform.position.y>=2.5||transform.position.y<=-2.5){
+        transform.Translate(Vector3.left * speed * Time.deltaTime * verticalInput);
+        if(transform.position.y >= 4 || transform.position.y <=- 4){
             SceneManager.LoadScene("Game_Over");
         }
     }
     public void shoot(){
         if(Input.GetKey(KeyCode.Space)){
-            if(ti>atkcooldwn){
+            if(ti > atkcooldwn){
                 Instantiate(Bullet,transform.position,Quaternion.identity);
-                ti=0;
+                ti = 0;
             }
         }
-        ti=ti+10*Time.deltaTime;
+        ti = ti + 10 * Time.deltaTime;
     }
 }

@@ -5,26 +5,24 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float live = 2;
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    public EnemySpawn Script;
+    public GameObject Code;
+    public float live;
+    public float Dam;
+    public void Start(){
+        Code = GameObject.FindWithTag("Codespace");
+        Script = Code.GetComponent<EnemySpawn>();
+        float a = Mathf.Pow(1.1f,Script.number);
+        live = 9 * a;
+        Dam = 0.9f * a;
     }
-    public float health = 100.0f;
-
-    public void TakeDamage(float damage)
-    {
-        Debug.Log("2");
-        // Reduce the enemy's health by the damage amount
-        health -= damage;
-
-        // Check if the enemy's health is zero or below
-        if (health <= 0)
-        {
-            // Destroy the enemy object
+    public void Update(){
+        
+    }
+    public void takeDmg(float Dmg){
+        live = live - Dmg;
+        if(live <= 0){
+            Script.restGegner--;
             Destroy(gameObject);
         }
     }
