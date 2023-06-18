@@ -29,7 +29,7 @@ public class EnemySpawn : MonoBehaviour
         }
     }
     public void Erstellen(Vector3 pos){
-        Instantiate(enemy,pos,Quaternion.LookRotation(Vector3.forward,Vector3.forward));
+        Instantiate(enemy,pos,transform.rotation);
     }
     public void nextWave(){
         restGegner = 0;
@@ -53,7 +53,7 @@ public class EnemySpawn : MonoBehaviour
     public void nextEnemy(){
         float x = Random.Range(0.5f,5);
         float y = Random.Range(-3,3);
-        Vector3 b = new Vector3(x,y);
+        Vector3 b = new Vector3(x,y,1);
         Erstellen(b);
         restGegner++;
     }

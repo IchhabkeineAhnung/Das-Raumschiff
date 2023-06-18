@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public EnemySpawn Script;
+    public Transform Schiff;
     public GameObject Code;
     public float live;
     public float Dam;
@@ -17,7 +18,10 @@ public class Enemy : MonoBehaviour
         Dam = 0.9f * a;
     }
     public void Update(){
-        
+        La();
+    }
+    public void La(){
+        transform.LookAt(Schiff);
     }
     public void takeDmg(float Dmg){
         live = live - Dmg;
