@@ -53,7 +53,7 @@ public class EnemySpawn : MonoBehaviour
     public void nextEnemy(){
         float x = Random.Range(0.5f,5);
         float y = Random.Range(-3,3);
-        Vector3 b = new Vector3(x,y,1);
+        Vector3 b = new Vector3(x,y,150);
         Erstellen(b);
         restGegner++;
     }
