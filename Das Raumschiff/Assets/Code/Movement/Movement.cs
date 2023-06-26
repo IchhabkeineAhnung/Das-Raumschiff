@@ -11,11 +11,12 @@ public class Movement : MonoBehaviour
     private float verticalInput;
     public float ti;
     public float atkcooldwn = 10;
+    public float live;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        live = 5;
     }
 
     // Update is called once per frame
@@ -27,8 +28,8 @@ void Update()
     
     public void movement(){
         verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.left * speed * Time.deltaTime * verticalInput);
-        if(transform.position.y >= 4 || transform.position.y <=- 4){
+        transform.Translate(Vector3.right * speed * Time.deltaTime * verticalInput);
+        if(transform.position.y >= 5 || transform.position.y <= -5){
             SceneManager.LoadScene("Game_Over");
         }
     }
@@ -40,5 +41,11 @@ void Update()
             }
         }
         ti = ti + 10 * Time.deltaTime;
+    }
+    public void takeDmg(float Dmg){
+        live = live - Dmg;
+        if(live <= 0){
+            SceneManager.LoadScene("Game_Over");
+        }
     }
 }

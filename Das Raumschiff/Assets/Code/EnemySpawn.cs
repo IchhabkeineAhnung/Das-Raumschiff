@@ -21,11 +21,8 @@ public class EnemySpawn : MonoBehaviour
     void Update()
     {
         if(restGegner <= 0 && a){
-        a = false;
-        Invoke("nextWave",1.5f);
-        }
-        if(Input.GetKeyDown(KeyCode.Q)){
-            Erstellen(transform.position);
+            a = false;
+            Invoke("nextWave",1.5f);
         }
     }
     public void Erstellen(Vector3 pos){

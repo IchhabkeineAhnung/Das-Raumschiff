@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 361371313450149925}
   - component: {fileID: 361371313450149923}
   - component: {fileID: 361371313450149920}
+  - component: {fileID: 6034481462941942601}
+  - component: {fileID: 1448179615026895586}
   m_Layer: 0
   m_Name: Raumschiff
   m_TagString: Raumschiff
@@ -74,13 +76,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 03fe9ffc567746c44ba30b44ead4085e, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -819081197, guid: 879c2187742a91c42a31e63d0570845b, type: 3}
   m_Color: {r: 0.94117653, g: 0.94117653, b: 0.94117653, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 12.8}
+  m_Size: {x: 4.56, y: 7.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -121,6 +123,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8759992494187170107, guid: 29d983539d7e7254db3d1cee5a756532, type: 3}
   speed: 5
-  stats: {fileID: 0}
   ti: 0
   atkcooldwn: 10
+  live: 0
+--- !u!95 &6034481462941942601
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361371313450149927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 12da4b4fcaa3e5d498daa6aa3cb210eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &1448179615026895586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361371313450149927}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.56, y: 7.12}
+    newSize: {x: 4.56, y: 7.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.56, y: 7.12}
+  m_EdgeRadius: 0

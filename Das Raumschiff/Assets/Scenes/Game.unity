@@ -411,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257003571}
   - component: {fileID: 1257003570}
+  - component: {fileID: 1257003572}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -485,6 +486,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1257003572
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257003569}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fdffcc8b7902d74082c8fb7c8e4b208, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1720798549 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 601241667458721959, guid: cc91e1b8a5c0c5e40bc29334e431630f, type: 3}
@@ -513,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149922, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149922, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -537,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149922, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149922, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -549,11 +571,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149922, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 361371313450149927, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 361371313450149927, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
       propertyPath: m_Name
       value: Raumschiff
+      objectReference: {fileID: 0}
+    - target: {fileID: 361371313450149927, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc6a39b0d5086464d9896b9bb08ea98f, type: 3}
