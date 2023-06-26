@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public float bulletspeed = 0.02f;
-    public int bulletpen = 2;
-    public float dmg = 1;
+    public GameObject Stat;
+    public Stats Code;
+    public float bulletspeed;
+    public int bulletpen;
+    public float dmg;
     void Start(){
-        bulletpen = 1;
-        bulletspeed = 0.1f;
-        dmg = 5;
+        Stat = GameObject.FindWithTag("Stats");
+        Code = Stat.GetComponent<Stats>();
+        dmg = Code.dmg;
+        bulletpen = Code.bulletpen;
+        bulletspeed = Code.bulletspeed;
     }
     // Update is called once per frame
     void Update()

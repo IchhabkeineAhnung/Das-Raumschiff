@@ -6,17 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject Stat;
+    public Stats Code;
     public GameObject Bullet;
     public float speed;
     private float verticalInput;
     public float ti;
-    public float atkcooldwn = 10;
+    public float atkcooldown;
     public float live;
 
     // Start is called before the first frame update
     void Start()
     {
-        live = 5;
+        Stat = GameObject.FindWithTag("Stats");
+        Code = Stat.GetComponent<Stats>();
+        up();
+        lup();
     }
 
     // Update is called once per frame
@@ -25,7 +30,13 @@ void Update()
         movement();
         shoot();
     }
-    
+    public void up(){
+        speed = Code.speed;
+        atkcooldown = Code.atkspeed;
+    }
+    public void lup(){
+        live = Code.live;
+    }
     public void movement(){
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * speed * Time.deltaTime * verticalInput);
@@ -35,7 +46,7 @@ void Update()
     }
     public void shoot(){
         if(Input.GetKey(KeyCode.Space)){
-            if(ti > atkcooldwn){
+            if(ti > atkcooldown){
                 Instantiate(Bullet,transform.position,Quaternion.identity);
                 ti = 0;
             }
