@@ -8,6 +8,13 @@ TagManager:
   - Stats
   - Enemy
   - Codespace
+  - random
+  - dmg
+  - atk
+  - pen
+  - speed
+  - bspeed
+  - live
   layers:
   - Default
   - TransparentFX
